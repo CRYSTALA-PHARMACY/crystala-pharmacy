@@ -132,7 +132,8 @@ code {
 .btn svg { width: 19px; height: 19px; flex: none; }
 .btn:active { transform: translateY(1px); }
 .btn--primary {
-  background: var(--grad-brand); color: #fff;
+  background-color: #1e6cb0;
+  background-image: var(--grad-brand); color: #fff;
   box-shadow: 0 8px 22px rgba(30, 108, 176, .35);
 }
 .btn--primary:hover { box-shadow: 0 12px 30px rgba(53, 184, 171, .45); transform: translateY(-2px); }
@@ -179,7 +180,7 @@ code {
 }
 .nav__links a:hover { color: var(--brand-700); background: rgba(30, 108, 176, .07); }
 .nav__links a.is-active { color: var(--brand-700); background: rgba(30, 108, 176, .09); }
-.nav__cta { margin-inline-start: 8px; padding: 10px 20px !important; font-size: .9rem !important; color: #fff !important; background: var(--grad-brand); }
+.nav__cta { margin-inline-start: 8px; padding: 10px 20px !important; font-size: .9rem !important; color: #fff !important; background-color: #1e6cb0; background-image: var(--grad-brand); }
 .nav__cta:hover { color: #fff !important; box-shadow: 0 8px 20px rgba(30, 108, 176, .35); }
 .nav__burger {
   display: none; margin-inline-start: auto;
@@ -209,7 +210,7 @@ code {
 .hero__badge .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--teal-500); box-shadow: 0 0 0 4px rgba(53, 184, 171, .2); animation: pulse 2.2s infinite; }
 @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 4px rgba(53, 184, 171, .2); } 50% { box-shadow: 0 0 0 8px rgba(53, 184, 171, .08); } }
 .hero h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); font-weight: 900; color: var(--brand-950); margin-bottom: 18px; }
-.grad { background: var(--grad-brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.grad { background-color: transparent; background-image: var(--grad-brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero__sub { font-size: 1.13rem; color: var(--ink-soft); max-width: 56ch; }
 .hero__sub strong { color: var(--brand-800); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin: 28px 0 26px; }
@@ -271,7 +272,8 @@ code {
 .mock__row--rx { border-color: #c6e9e3; background: #f6fcfb; }
 .mock__total {
   display: flex; align-items: center; justify-content: space-between;
-  background: var(--grad-brand); color: #fff; border-radius: 12px; padding: 12px 16px;
+  background-color: #1e6cb0;
+  background-image: var(--grad-brand); color: #fff; border-radius: 12px; padding: 12px 16px;
   font-weight: 800;
 }
 .mock__total b { font-size: 1.2rem; }
