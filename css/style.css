@@ -716,3 +716,11 @@ code {
 .dl-card__actions .btn { width: 100%; flex-wrap: wrap; overflow-wrap: anywhere; line-height: 1.6; }
 .btn { min-width: 0; }
 .compare__table td { overflow-wrap: anywhere; }
+
+/* حماية زر القائمة الرئيسي (CTA) — قواعد الروابط العامة (hover/is-active) لا تُبطل تدرجه أبداً */
+.nav__links a.nav__cta,
+.nav__links a.nav__cta:is(:hover, :focus-visible, .is-active) {
+  background-color: #1e6cb0;
+  background-image: var(--grad-brand);
+  color: #fff !important;
+}

@@ -158,7 +158,7 @@ function initNav() {
     const spy = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          links.querySelectorAll('a[href^="#"]').forEach(a =>
+          links.querySelectorAll('a[href^="#"]:not(.nav__cta)').forEach(a =>
             a.classList.toggle('is-active', a.getAttribute('href') === '#' + e.target.id));
         }
       });
