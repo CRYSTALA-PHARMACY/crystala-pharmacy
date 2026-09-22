@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRYSTALA PHARMACY — نظام إدارة الصيدليات | أوفلاين 100% + فاتورة إلكترونية</title>
+  <meta name="description" content="نظام إدارة صيدليات مصري متكامل يعمل محلياً بالكامل بلا إنترنت: نقطة بيع بالباركود، مخزون ودفعات وصلاحية، روشتات QR بتأكيد موثق، فاتورة إلكترونية ETA، تتبع أدوية هيئة الدواء EDA، تأمين طبي، ولاء عملاء وتوصيل وتركيبات معملية — مع عملاء كاشير ويندوز وأندرويد على شبكة صيدليتك." />
+  <meta name="theme-color" content="#0e2a43" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CRYSTALA PHARMACY — نظام إدارة الصيدليات" />
+  <meta property="og:description" content="14 وحدة تشغيلية تعمل أوفلاين 100%: نقطة بيع، مخزون، روشتات QR، فاتورة إلكترونية ETA، تتبع EDA، تأمين طبي، ولاء وتوصيل — بياناتك على جهازك أنت." />
+  <meta property="og:image" content="assets/img/logo-512.png" />
+  <meta property="og:locale" content="ar_EG" />
+
+  <!-- خط Cairo — نفس خط التطبيق -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- بيانات منظمة لمحركات البحث -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CRYSTALA PHARMACY",
+    "operatingSystem": "Windows, Android",
+    "applicationCategory": "BusinessApplication",
+    "inLanguage": "ar",
+    "description": "نظام إدارة صيدليات يعمل محلياً بالكامل مع تكامل الفاتورة الإلكترونية المصرية وتتبع أدوية هيئة الدواء",
+    "offers": { "@type": "Offer", "price": "6500", "priceCurrency": "EGP" },
+    "featureList": "نقطة بيع، مخزون ودفعات، روشتات QR، فاتورة إلكترونية ETA، تتبع EDA، تأمين طبي، ولاء عملاء، توصيل، تركيبات معملية، تقارير"
+  }
+  </script>
+</head>
+<body>
+
+<!-- شريط تقدم القراءة -->
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ═══════════ شريط التنقل ═══════════ -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="#top">
+      <img src="assets/img/logo-512.png" alt="شعار CRYSTALA PHARMACY" />
+      <span>CRYSTALA<small>PHARMACY SYSTEM</small></span>
+    </a>
+    <nav aria-label="التنقل الرئيسي">
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#modules">الوحدات</a></li>
+        <li><a href="#features">المميزات</a></li>
+        <li><a href="#architecture">بنية الشبكة</a></li>
+        <li><a href="#security">الأمان</a></li>
+        <li><a href="#download">التحميل</a></li>
+        <li><a href="#pricing">الأسعار</a></li>
+        <li><a href="#faq">الأسئلة</a></li>
+        <li><a class="btn btn--primary nav__cta" href="#download">ابدأ تجربة 30 يوماً مجاناً</a></li>
+      </ul>
+    </nav>
+    <button class="nav__burger" type="button" aria-label="فتح القائمة">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ═══════════ البطل ═══════════ -->
+<section class="hero" id="top">
+  <div class="hero__bg" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+  </div>
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <span class="hero__badge"><span class="dot"></span> الإصدار 1.6.4 — متاح الآن ومجرَّب ميدانياً</span>
+        <h1>صيدليتك بالكامل،<br />على <span class="grad">جهازك أنت</span></h1>
+        <p class="hero__sub">
+          نظام إدارة صيدليات مصري متكامل يعمل محلياً بنسبة <strong>100% بلا إنترنت ولا سحابة</strong> —
+          نقطة بيع، مخزون ودفعات، روشتات QR، فاتورة إلكترونية (ETA)، تتبع هيئة الدواء (EDA)،
+          تأمين طبي، ولاء عملاء وتوصيل — كل ذلك في منظومة واحدة تعمل على شبكة صيدليتك.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#download">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            حمّل النظام مجاناً
+          </a>
+          <a class="btn btn--outline btn--lg" href="#modules">استكشف 14 وحدة</a>
+        </div>
+        <ul class="hero__points">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> أوفلاين بالكامل — بياناتك عندك</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> فاتورة إلكترونية ETA</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> تتبع أدوية EDA</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> كاشير + أندرويد على شبكتك</li>
+        </ul>
+      </div>
+
+      <!-- محاكاة واجهة النظام (CSS خالص) -->
+      <div class="hero__visual" aria-hidden="true">
+        <div class="mock">
+          <div class="mock__bar">
+            <span></span><span></span><span></span>
+            <em>CRYSTALA — نقطة البيع</em>
+          </div>
+          <div class="mock__body">
+            <div class="mock__kpis">
+              <div class="mock__kpi"><b>مبيعات اليوم</b><strong>18,450</strong><i>ج.م</i></div>
+              <div class="mock__kpi mock__kpi--teal"><b>فواتير</b><strong>64</strong><i>فاتورة</i></div>
+              <div class="mock__kpi mock__kpi--amber"><b>تنبيه صلاحية</b><strong>3</strong><i>أصناف</i></div>
+            </div>
+            <div class="mock__scan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>
+              امسح الباركود أو اكتب اسم الدواء…
+              <kbd>Enter</kbd>
+            </div>
+            <div class="mock__rows">
+              <div class="mock__row"><span class="mock__pill">Paracetamol 500mg</span><span>×2</span><b>36.00</b></div>
+              <div class="mock__row"><span class="mock__pill">Augmentin 1g</span><span>×1</span><b>92.50</b></div>
+              <div class="mock__row mock__row--rx"><span class="mock__pill mock__pill--rx">RXQR — روشتة مرتبطة ✓</span><span>×3</span><b>54.00</b></div>
+              <div class="mock__row"><span class="mock__pill">Concor 5mg</span><span>×1</span><b>45.75</b></div>
+            </div>
+            <div class="mock__total"><span>الإجمالي</span><b>228.25 <i>ج.م</i></b></div>
+          </div>
+        </div>
+        <div class="float-chip float-chip--1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+          أوفلاين 100%
+        </div>
+        <div class="float-chip float-chip--2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+          عميل أندرويد على شبكتك
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ شريط الأرقام ═══════════ -->
+<div class="container">
+  <div class="stats reveal">
+    <div class="stats__item">
+      <div class="stats__num" data-count="14">0</div>
+      <div class="stats__label">وحدة تشغيلية متكاملة</div>
+    </div>
+    <div class="stats__item">
+      <div class="stats__num" data-count="57" data-suffix="+">0</div>
+      <div class="stats__label">شاشة عمل جاهزة</div>
+    </div>
+    <div class="stats__item">
+      <div class="stats__num" data-count="39" data-suffix="+">0</div>
+      <div class="stats__label">مجموعة واجهات API</div>
+    </div>
+    <div class="stats__item">
+      <div class="stats__num" data-count="444">0</div>
+      <div class="stats__label">اختباراً آلياً ناجحاً</div>
+    </div>
+    <div class="stats__item">
+      <div class="stats__num" data-count="100" data-suffix="%">0</div>
+      <div class="stats__label">تشغيل محلي بلا إنترنت</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ الوحدات الـ 14 ═══════════ -->
+<section class="section" id="modules">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">منظومة كاملة — لا برامج متفرقة</span>
+      <h2 class="sec-title">14 وحدة تشغيلية تحت سقف واحد</h2>
+      <p class="sec-sub">
+        كل وحدة مبنية لبيئة الصيدلية المصرية وتتكامل مع البقية تلقائياً: بيعك يخصم المخزون،
+        والمخزون يغذي التقارير، والروشتة تُوثَّق بفاتورتها — دون إدخال مزدوج أبداً.
+      </p>
+    </div>
+
+    <div class="modules">
+
+      <article class="module reveal">
+        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18l-1.3 10.3a2 2 0 0 1-2 1.7H6.3a2 2 0 0 1-2-1.7L3 9Z"/><path d="M7 9V6a5 5 0 0 1 10 0v3"/></svg></span>
+        <h3>نقطة البيع POS</h3>
+        <p>بيع بالباركود والكاميرا، مبيعات معلّقة، ورديات بعهدة نقدية، ومرتجعات موثقة — مصمم لذروة الزحام.</p>
+      </article>
+
+      <article class="module reveal">
+        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7Z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg></span>
+        <h3>المخزون والجرد</h3>
+        <p>دفعات وتشغيلات وصلاحية FEFO، جرد بالمسح المستمر، تحويلات بين مخازن، وهالك وإتلاف وفق القانون.</p>
+      </article>
+
+      <article class="module reveal">
+        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg></span>
+        <h3>دليل الأدوية</h3>
+        <p>قاعدة أدوية بالاسم التجاري والعلمي والتركيز، تفاعلات دوائية تحذيرية، وبدائل بنفس المادة الفعالة.</p>
+      </article>
+
+      <article class="module reveal">
+        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v3M14 20h7"/></svg></span>
+        <h3>الروشتات وQR</h3>
+        <p>روشتات برمز QR فريد تُمسح وتُؤكَّد عند الصرف وترتبط بفاتورة البيع تلقائياً — بصور موثقة 5 سنوات.</p>
+      </article>
+
+      <article class="module reveal">
+        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/></svg></span>
+        <h3>المجدولة والإتلاف</h3>
+        <p>صرف المخدرات والمؤثرات النفسية بمستنداتها الرسمية وسجل مفتوح للتفتيش — التزاماً بقانون 127 لسنة 1955.</p>
+      </article>
+
+      <article class="module reveal">
+        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span>
+        <h3>الفاتورة الإلكترونية ETA</h3>
+        <p>إيصالات B2C وفواتير B2B بتوقيع CAdES-BES، إرسال واستعلام وإلغاء، بيئة اختبار وإنتاج، ومزامنة تلقائية.</p>
+      </article>
+
+      <article class="module reveal">
+        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></span>
+        <h3>تتبع هيئة الدواء EDA</h3>
+        <p>ربط بمنظومة القابلية للتتبع مع مزامنة تلقائية وسجل أحداث كامل وقاطع دائرة عند انقطاع الشبكة.</p>
+      </article>
+
+      <article class="module reveal">
+        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg></span>
+        <h3>التأمين الطبي</h3>
+        <p>اعتمادات وسياسات تأمين، مطالبات صرف بأحكامها، وتقارير جاهزة لمراجعة شركات التأمين وجهات التقاعد.</p>
+      </article>
+
+      <article class="module reveal">
+        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg></span>
+        <h3>المشتريات والموردون</h3>
+        <p>فواتير شراء بالاستلام بالمسح، مرتجعات وملاحظات دائن، وحسابات موردين آجلة بأعمار ديون ومستحقات.</p>
+      </article>
+
+      <article class="module reveal">
+        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M17.5 13.5a6.5 6.5 0 0 1 4 6.5"/></svg></span>
+        <h3>العملاء والولاء</h3>
+        <p>حسابات عملاء بديون وأعمار، برنامج ولاء بنقاط وحدود إنفاق، وطلبات توصيل بدورة مخزون ومحاسبة كاملة.</p>
+      </article>
+
+      <article class="module reveal">
+        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3zM3 10h18"/><path d="M7 15h4"/></svg></span>
+        <h3>الخزينة والمالية</h3>
+        <p>خزينة بعهدة ومصروفات، سجلات ضريبية، تحليل أرباح بالصنف والفئة، ولوحة تنفيذية لمؤشرات الصيدلية.</p>
+      </article>
+
+      <article class="module reveal">
+        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></span>
+        <h3>التقارير ولوحات المؤشرات</h3>
+        <p>لوحة حية بتنبيهات فورية، مبيعات شهرية، مقارنة أداء فترات، تقارير هيئة الدواء والتأمين، وتصدير Excel/PDF بخط عربي سليم.</p>
+      </article>
+
+      <article class="module reveal">
+        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14v18l-7-4-7 4V3Z"/></svg></span>
+        <h3>التركيبات المعملية</h3>
+        <p>وصفات تركيبات بمكوناتها وجرعاتها، أوامر تحضير بحالات تنفيذ، وتكلفة محسوبة تلقائياً من مكونات المخزن.</p>
+      </article>
+
+      <article class="module reveal">
+        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1.6"/></svg></span>
+        <h3>الإدارة والأمان</h3>
+        <p>مستخدمون وأدوار مفصلة، مصادقة ثنائية TOTP، سجل تدقيق لكل عملية حساسة، ونسخ احتياطي مجدول تلقائي.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ المميزات بالتفصيل ═══════════ -->
+<section class="section section--alt" id="features">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">التعمق في التفاصيل</span>
+      <h2 class="sec-title">مميزات صُنعت من داخل الصيدلية — لا من ورقة مواصفات</h2>
+      <p class="sec-sub">كل ميزة هنا تعمل فعلياً ومُختبرة آلياً وموثقة في سجل تطوير النظام: 444 اختباراً ناجحاً، وبناء نظيف بلا تحذيرات.</p>
+    </div>
+
+    <div class="feat-groups">
+
+      <!-- نقطة البيع -->
+      <div class="feat-group reveal">
+        <div class="feat-group__head">
+          <span class="feat-group__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18l-1.3 10.3a2 2 0 0 1-2 1.7H6.3a2 2 0 0 1-2-1.7L3 9Z"/><path d="M7 9V6a5 5 0 0 1 10 0v3"/></svg></span>
+          <div>
+            <h3 class="feat-group__title">نقطة بيع فائقة السرعة</h3>
+            <p class="feat-group__desc">صُممت لصف الدواء في ذروة المساء — كل نقرة لها معنى</p>
+          </div>
+        </div>
+        <div class="feats">
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.35-4.35"/><circle cx="11" cy="11" r="7"/></svg>
+            <h4>باركود وكاميرا وGS1 المصري</h4>
+            <p>ماسح USB بتركيز تلقائي، كاميرا الجهاز أو الهاتف، وقراءة كاملة لرموز GS1 DataMatrix المصرية <code>(01)GTIN(17)تاريخ(10)تشغيلة</code> — استخراج تلقائي للـGTIN مع معالجة الأصفار البادئة.</p>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+            <h4>مبيعات معلّقة وورديات</h4>
+            <p>علّق فاتورة عميل وارجع لها وسط الزحام، وافتح وأغلق الورديات بعهدة نقدية، واحصل على تقرير فرق الصندوق لكل صيدلي على حدة.</p>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 4v5h5"/><path d="M9 14 12 11l2.5 2.5L20 8"/></svg>
+            <h4>ارتباط الروشتة بالفاتورة تلقائياً</h4>
+            <p>امسح QR الروشتة في السلة — عند إتمام البيع يؤكدها النظام ويربطها بالفاتورة داخل المعاملة نفسها، مع منع «الصرف المزدوج» بحماية على مستوى قاعدة البيانات حتى لو تسابق كاشيران.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- المخزون -->
+      <div class="feat-group reveal">
+        <div class="feat-group__head">
+          <span class="feat-group__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7Z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg></span>
+          <div>
+            <h3 class="feat-group__title">ذكاء مخزون بمعايير الصيدلة</h3>
+            <p class="feat-group__desc">من أول علبة تدخل المخزن حتى إتلافها وفق القانون</p>
+          </div>
+        </div>
+        <div class="feats">
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4m8-4v4M3 10h18"/></svg>
+            <h4>دفعات وتشغيلات وFEFO</h4>
+            <p>تتبع كل دفعة برقم تشغيلة وتاريخ انتهاء، وصرف الأقرب انتهاءً تلقائياً (FEFO)، مع أسعار رسمية رسمية لكل صنف ومقارنة سعر الشراء بالسعر الرسمي.</p>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l1 3h4v3H4V6h4l1-3Z"/><path d="M5 9v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9"/><path d="M10 13h4"/></svg>
+            <h4>جرد بالمسح المستمر</h4>
+            <p>جرد كلي وجزئي — امسح الأصناف بكاميرا الجهاز أو الهاتف: كل مسح يزيد العدد الفعلي واحدًا، والفروقات تُحسب تلقائياً وتُعتمد بصلاحيات.</p>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7-5 7 5M5 8v8m14-8v8M3 21h4m10 0h4"/></svg>
+            <h4>تحويلات وهالك وإتلاف قانوني</h4>
+            <p>حوّل بين المخازن بمستندات معتمدة، وسجّل الهالك والإتلاف بأسبابه وتوثيقه النظامي — سجل حركات كامل يرضي أي تفتيش.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- الروشتات والسلامة الدوائية -->
+      <div class="feat-group reveal">
+        <div class="feat-group__head">
+          <span class="feat-group__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8v3H8zM6 5h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/><path d="M9 11h6M9 15h4"/></svg></span>
+          <div>
+            <h3 class="feat-group__title">روشتات موثقة وسلامة دوائية</h3>
+            <p class="feat-group__desc">حلقة مغلقة: طبيب ← روشتة QR ← صرف مؤكد ← فاتورة مرتبطة</p>
+          </div>
+        </div>
+        <div class="feats">
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v3M14 20h7"/></svg>
+            <h4>تأكيد QR بمسح أي ماسح</h4>
+            <p>كل روشتة برمز QR فريد يُطبع ملصقاً لاصقاً حرارياً ويلصق على ورقة الروشتة. عند الصرف يمسحه الصيدلي (USB/كاميرا/هاتف) أو يكتب رقمه — والتأكيد موثّق بالاسم والزمن، والمسح المزدوج آمن تماماً.</p>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4m0 4h.01"/></svg>
+            <h4>تفاعلات دوائية وبدائل</h4>
+            <p>تحذيرات تفاعل بين الأدوية عند الحاجة، وبدائل بنفس المادة الفعالة والتركيز تُقترح فوراً عند نقص صنف — قرار أسرع وأدق أمام العميل.</p>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5"/></svg>
+            <h4>صور روشتات محفوظة 5 سنوات</h4>
+            <p>صورة الروشتة (JPG/PNG/PDF) تُحفظ مع بياناتها وتُعرض في نافذة التفاصيل، مع حماية على مستوى قاعدة البيانات تمنع تعديل أي محتوى بعد الحفظ — سياسة احتفاظ مطابقة للقانون.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- الامتثال الحكومي -->
+      <div class="feat-group reveal">
+        <div class="feat-group__head">
+          <span class="feat-group__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span>
+          <div>
+            <h3 class="feat-group__title">امتثال حكومي مصري 100%</h3>
+            <p class="feat-group__desc">ربطات رسمية حقيقية — لا حلول ملتوية ولا «طباعة خارجية»</p>
+          </div>
+        </div>
+        <div class="feats">
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+            <h4>الفاتورة الإلكترونية ETA</h4>
+            <p>إيصالات B2C وفواتير B2B بتوقيع CAdES-BES الرسمي، إرسال واستعلام وإلغاء، دعم بيئة الاختبار والإنتاج، وذاكرة إرسال تعيد المحاولة تلقائياً عند انقطاع النت.</p>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg>
+            <h4>تتبع أدوية هيئة الدواء EDA</h4>
+            <p>ربط بمنظومة القابلية للتتبع مع مزامنة أحداث تلقائية في الخلفية، سجل أحداث وتحققات كامل، وقاطع دائرة يحمي البيع عندما تكون الشبكة مقطوعة.</p>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg>
+            <h4>ترميز حكومي ومجدولة</h4>
+            <p>ترميز حكومي للأصناف، صرف مجدول (مخدرات/مؤثرات نفسية) بمستنداته الرسمية، وإتلاف صيدلاني موثق — كل ما يطلبه المفتش موجود بنقرة.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- نمو الأعمال -->
+      <div class="feat-group reveal">
+        <div class="feat-group__head">
+          <span class="feat-group__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>
+          <div>
+            <h3 class="feat-group__title">أدوات تكسب عملاء وتُنمّي صيدليتك</h3>
+            <p class="feat-group__desc">ميزات «أنظمة كبرى» داخل ترخيصك بلا رسوم إضافية</p>
+          </div>
+        </div>
+        <div class="feats">
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+            <h4>برنامج ولاء وتوصيل</h4>
+            <p>نقاط ولاء لكل عميل مع حدود إنفاق ومستويات، وطلبات توصيل بدورة كاملة: حجز مخزون عند الطلب، تحرير عند الإلغاء، وفاتورة بيع حقيقية عند التسليم مع دين العميل للمتبقي.</p>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+            <h4>تأمين طبي متكامل</h4>
+            <p>اعتمادات وشركات تأمين وسياسات، صرف بأحكام التغطية، مطالبات وتقارير جاهزة — تحوّل ملف التأمين الورقي إلى أرشيف رقمي منظّم.</p>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14v18l-7-4-7 4V3Z"/></svg>
+            <h4>تركيبات معملية</h4>
+            <p>وصفات تركيبات بمكوناتها وكمياتها، أوامر تحضير بحالات (بانتظار/جارٍ/تم)، وتكلفة تلقائية من أسعار مكونات المخزن — ميزة نادرة حتى في الأنظمة المستوردة.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- التحكم الإداري -->
+      <div class="feat-group reveal">
+        <div class="feat-group__head">
+          <span class="feat-group__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M17.5 13.5a6.5 6.5 0 0 1 4 6.5"/></svg></span>
+          <div>
+            <h3 class="feat-group__title">تحكم إداري كامل وراحة بال</h3>
+            <p class="feat-group__desc">أنت المالك — وكل عملية حساسة موثقة باسم من قام بها</p>
+          </div>
+        </div>
+        <div class="feats">
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            <h4>صلاحيات وسجل تدقيق و2FA</h4>
+            <p>أدوار مفصلة (مدير/صيدلي/كاشير) بصلاحيات دقيقة، مصادقة ثنائية TOTP لحسابات المدير، وسجل تدقيق يسجل كل تغيير سعر وحذف فاتورة وتعديل ترخيص — بالاسم والزمن.</p>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+            <h4>نسخ احتياطي مجدول تلقائياً</h4>
+            <p>جدولة نسخ احتياطي يومي لقاعدة البيانات مع ضغط وحذف القديم تلقائياً، واستعادة بنقرة، ونسخة قابلة للنقل لخارج الجهاز — بياناتك ملكك وتستطيع مغادرة النظام بها متى شئت.</p>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg>
+            <h4>تقارير بمعايير إدارة حقيقية</h4>
+            <p>لوحة مؤشرات حية بتنبيهات فورية عبر SignalR، لوحة تنفيذية للمُلّاك، مبيعات شهرية، مقارنة أداء فترات، تحليل أرباح بالصنف، وتصدير Excel/PDF بخط عربي سليم غير مشوّه.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ بنية الشبكة ═══════════ -->
+<section class="section" id="architecture">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">يعمل مثل شبكة الصيدليات الكبرى</span>
+      <h2 class="sec-title">جهاز رئيسي واحد… وكل أجهزتك عليه</h2>
+      <p class="sec-sub">ثبّت الماستر على جهاز واحد، وستكتشف بقية الأجهزة الخادم تلقائياً على شبكة الصيدلية — بلا إعدادات ولا عناوين IP ولا خبرة تقنية.</p>
+    </div>
+
+    <div class="arch">
+      <div class="arch__diagram">
+        <div class="arch__node arch__node--master">
+          <span class="arch__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 6.5h.01M6 17.5h.01"/></svg></span>
+          <span class="tag">الجهاز الرئيسي</span>
+          <h3>الماستر — الخادم والواجهة</h3>
+          <p>عليه قاعدة بيانات PostgreSQL 17 وكل الشاشات الإدارية ونقاط البيع. يكفي أي جهاز ويندوز عادي — لا خوادم ولا خبرة تقنية.</p>
+          <ul class="arch__specs">
+            <li>خادم ASP.NET Core + واجهة Blazor</li>
+            <li>PostgreSQL 17 مضمّنة في المثبّت</li>
+            <li>تنبيهات حية SignalR لكل الأجهزة</li>
+          </ul>
+        </div>
+        <div class="arch__links" aria-hidden="true">
+          <span class="arch__link arch__link--a"></span>
+          <span class="arch__link arch__link--b"></span>
+          <span class="arch__link arch__link--c"></span>
+          <span class="arch__pulse">UDP اكتشاف تلقائي</span>
+        </div>
+        <div class="arch__clients">
+          <div class="arch__node">
+            <span class="arch__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="13" rx="2"/><path d="M8 21h8M12 16v5"/></svg></span>
+            <span class="tag">أجهزة الكاشير والاستقبال</span>
+            <h3>عميل ويندوز</h3>
+            <p>تطبيق يفتح النظام مباشرة من الماستر — كروميوم مضمّن فيه، يعمل من ويندوز 7 SP1 بلا أي متطلبات، وكاميرته تقرأ الباركود وQR.</p>
+          </div>
+          <div class="arch__node">
+            <span class="arch__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></span>
+            <span class="tag">هاتفك في جيبك</span>
+            <h3>تطبيق أندرويد</h3>
+            <p>نسخة مصغّرة بماسح ZXing أصلي: بحث ومسح باركود وGS1 وتأكيد روشتات بكاميرا الهاتف — من أي مكان داخل الصيدلية.</p>
+          </div>
+          <div class="arch__node">
+            <span class="arch__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z"/></svg></span>
+            <span class="tag">أي متصفح على الشبكة</span>
+            <h3>متصفح مباشر</h3>
+            <p>أي جهاز على الشبكة يفتح النظام من المتصفح على عنوان الماستر — لابتوب الجدولة أو جهاز الاستقبال الإضافي بلا تثبيت شيء.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch__hints">
+        <div class="arch__hint reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+          اكتشاف تلقائي عبر UDP على شبكة الواي فاي — مع إدخال يدوي احتياطي عند الحاجة
+        </div>
+        <div class="arch__hint reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+          انقطاع الإنترنت لا يوقف بيعة واحدة — الربطات الحكومية تعمل بذاكرة مزامنة وقاطع دائرة
+        </div>
+        <div class="arch__hint reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+          كل فرع يعمل بنظامه وقاعدة بياناته المحلية المستقلة — بيانات الفروع لا تختلط أبداً
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ الأمان والخصوصية ═══════════ -->
+<section class="section section--dark" id="security">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">بياناتك أمانة</span>
+      <h2 class="sec-title">أمان بمعايير بنكية — على جهازك أنت</h2>
+      <p class="sec-sub">نحن لا نستطيع الوصول إلى بياناتك ولو أردنا: كل شيء محلي داخل صيدليتك، والحمايات مبنية في طبقات من قاعدة البيانات حتى الواجهة.</p>
+    </div>
+
+    <div class="security">
+      <div class="sec-card reveal">
+        <span class="sec-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1.6"/></svg></span>
+        <h3>مصادقة ثنائية TOTP</h3>
+        <p>حماية حساب المدير بتطبيق مصادقة (Google Authenticator وأمثاله) — حتى لو سُرقت كلمة المرور لن يدخل أحد.</p>
+      </div>
+      <div class="sec-card reveal">
+        <span class="sec-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></span>
+        <h3>سجل تدقيق غير قابل للعبث</h3>
+        <p>كل عملية حساسة — تعديل سعر، حذف فاتورة، تأكيد روشتة، إصدار حركة إتلاف — مسجلة بالاسم والزمن في سجل محمي بمشغّلات قاعدة البيانات.</p>
+      </div>
+      <div class="sec-card reveal">
+        <span class="sec-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <h3>حماية على مستوى قاعدة البيانات</h3>
+        <p>مشغّلات منع تعديل تفرض سياسة الاحتفاظ 5 سنوات للروشتات وحركات المجدولة — حتى الولوج المباشر لقاعدة البيانات لا يستطيع كشف التوثيق أو فك الربط.</p>
+      </div>
+      <div class="sec-card reveal">
+        <span class="sec-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M12 8v4m0 4h.01"/></svg></span>
+        <h3>ترخيص موقّع رقمياً وبصمة جهاز</h3>
+        <p>التراخيص موقعة توقيعاً رقمياً ومرتبطة ببصمة الجهاز، مع آلة حالات (نشط/سماح/قراءة فقط) — لا تلاعب ولا نسخ للترخيص بين الأجهزة.</p>
+      </div>
+      <div class="sec-card reveal">
+        <span class="sec-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
+        <h3>نسخ احتياطي واستعادة بنقرة</h3>
+        <p>جدولة تلقائية يومية مع ضغط وتدوير النسخ القديمة، واستعادة موجهة بالمعالج، ونسخة قابلة للنقل — كارثة القرص التالف لم تعد نهاية العالم.</p>
+      </div>
+      <div class="sec-card reveal">
+        <span class="sec-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+        <h3>بصمة SHA256 لكل ملف تحميل</h3>
+        <p>كل ملف تحميل (الماستر، العميل، الأندرويد) منشور مع بصمة SHA256 الخاصة به — قارنها بعد التحميل وتأكد أن ملفك مطابق 100% لما أُصدر، لا غش ولا تبديل ممكن.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ التقنيات ═══════════ -->
+<section class="section" id="tech">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">تحت الغطاء</span>
+      <h2 class="sec-title">تقنيات حديثة ومجرَّبة — بلا تجارب على متجرك</h2>
+      <p class="sec-sub">اختيارات تقنية ناضجة تضمن سرعة واستقراراً وقابلية تطوير لعشر سنوات قادمة، وتعمل بلا إنترنت بالكامل.</p>
+    </div>
+
+    <div class="tech reveal">
+      <div class="tech__grid">
+        <div class="tech__item">
+          <span class="tech__name">الخادم</span>
+          <span class="tech__val">ASP.NET Core (.NET 10)</span>
+          <span class="tech__desc">واجهات REST موثقة ومصونة — أداء عالٍ واستقرار مؤسسي</span>
+        </div>
+        <div class="tech__item">
+          <span class="tech__name">قاعدة البيانات</span>
+          <span class="tech__val">PostgreSQL 17</span>
+          <span class="tech__desc">محلية بالكامل ومضمّنة في المثبّت — لا سحابة ولا خدمة خارجية</span>
+        </div>
+        <div class="tech__item">
+          <span class="tech__name">الواجهة</span>
+          <span class="tech__val">Blazor WebAssembly</span>
+          <span class="tech__desc">واجهة عربية RTL كاملة تعمل من الخادم مباشرة — لا تثبيت للعملاء</span>
+        </div>
+        <div class="tech__item">
+          <span class="tech__name">التنبيهات الحية</span>
+          <span class="tech__val">SignalR</span>
+          <span class="tech__desc">تنبيهات نقص وصلاحية ومبيعات تظهر فوراً على كل الأجهزة المتصلة</span>
+        </div>
+        <div class="tech__item">
+          <span class="tech__name">عميل ويندوز</span>
+          <span class="tech__val">CefSharp كروميوم مضمّن</span>
+          <span class="tech__desc">وضع كشك آمن مع كاميرا وباركود — يعمل من ويندوز 7 SP1</span>
+        </div>
+        <div class="tech__item">
+          <span class="tech__name">عميل أندرويد</span>
+          <span class="tech__val">أصلي + ZXing</span>
+          <span class="tech__desc">ماسح مدمج بلا إنترنت يقرأ 12 صيغة باركود وQR وDataMatrix</span>
+        </div>
+        <div class="tech__item">
+          <span class="tech__name">الطباعة</span>
+          <span class="tech__val">حرارية ESC/POS + A4</span>
+          <span class="tech__desc">إيصالات 58/80مم، ملصقات باركود وQR بـ12 مقاساً ومقاس مخصص</span>
+        </div>
+        <div class="tech__item">
+          <span class="tech__name">النشر</span>
+          <span class="tech__val">مثبّتات NSIS + Docker</span>
+          <span class="tech__desc">مثبت ويندوز يجهز كل شيء تلقائياً، وحزم Docker/systemd للسيرفرات</span>
+        </div>
+      </div>
+      <div class="tech__note reveal">
+        <strong>صفر اعتماديات وقت التشغيل:</strong>
+        مثبّت الماستر يتضمن قاعدة البيانات ووقت التشغيل .NET وVC++ Redistributable وكل المكتبات المحلية (JsBarcode وqrcode-generator) —
+        بعد التثبيت لا يحتاج النظام إنترنت إطلاقاً إلا لمن يفعّل الربطات الحكومية الاختيارية.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ التحميل ═══════════ -->
+<section class="section section--alt" id="download">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">تحميل مباشر</span>
+      <h2 class="sec-title">حمّل النظام وابدأ خلال دقائق</h2>
+      <p class="sec-sub">كل ملف موثّق ببصمة SHA-256 — تحقق منها بعد التحميل لتضمن حصولك على النسخة الأصلية دون أي تعديل.</p>
+    </div>
+
+    <div class="dl-grid" id="dl-grid">
+      <!-- تُبنى البطاقات تلقائياً من js/main.js — عدّل الروابط والبصمات من هناك -->
+    </div>
+
+    <div class="dl-note reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4m0 4h.01"/><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0Z"/></svg>
+      <div>
+        <strong>التحقق من سلامة الملف (خطوة موصى بها):</strong>
+        بعد التحميل افتح موجه الأوامر في مجلد الملف ونفّذ:
+        <code>certutil -hashfile FILENAME SHA256</code>
+        ثم قارن الناتج بالبصمة المعروضة أعلاه. إن تطابقا فالملف أصلي وسليم 100%.
+        <span class="dl-note__hint">ترتيب التثبيت: ابدأ بمثبّت الماستر على جهاز رئيسي واحد، ثم ثبّت العميل على أجهزة الكاشير وتطبيق الأندرويد على الهواتف.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ الأسعار ═══════════ -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">باقات واضحة بلا مفاجآت</span>
+      <h2 class="sec-title">اختر ما يناسب طريقة عملك</h2>
+      <p class="sec-sub">ابدأ بتجربة كاملة 30 يوماً بكل المميزات وبدون بطاقة — وإذا اشتريت، بيانات تجربتك تنتقل معك كما هي دون تصدير أو استيراد.</p>
+    </div>
+
+    <div class="pricing">
+      <!-- التجريبية -->
+      <div class="plan reveal">
+        <div class="plan__name">التجريبية</div>
+        <p class="plan__for">لتجربة النظام كاملاً قبل أي التزام</p>
+        <div class="plan__price"><strong>مجاناً</strong><span>لمدة 30 يوماً</span></div>
+        <span class="plan__save">كل الوحدات مفتوحة — حتى 3 مستخدمين</span>
+        <ul class="plan__list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> جميع الوحدات والشاشات بلا استثناء</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> 3 مستخدمين على شبكة صيدليتك</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> بدون بطاقة ائتمان أو بيانات دفع</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> بياناتك تبقى سليمة عند الترقية</li>
+        </ul>
+        <a class="btn btn--outline" href="#download">حمّل وابدأ الآن</a>
+      </div>
+
+      <!-- الشهرية -->
+      <div class="plan reveal">
+        <div class="plan__name">الاشتراك الشهري</div>
+        <p class="plan__for">لمن يفضّل الالتزام القصير</p>
+        <div class="plan__price"><strong>750</strong><span>ج.م / شهرياً</span></div>
+        <span class="plan__save">حتى 5 مستخدمين — سماح 7 أيام</span>
+        <ul class="plan__list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> كل مميزات النظام بلا استثناء</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> تحديثات مجانية أثناء الاشتراك</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> دعم فني عبر واتساب</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> إلغاء في أي وقت دون شروط</li>
+        </ul>
+        <a class="btn btn--outline" href="#contact">اطلب الاشتراك</a>
+      </div>
+
+      <!-- السنوية -->
+      <div class="plan plan--hot reveal">
+        <span class="plan__flag">الأكثر اختياراً</span>
+        <div class="plan__name">الاشتراك السنوي</div>
+        <p class="plan__for">القيمة الأفضل للاستمرار</p>
+        <div class="plan__price"><strong>6,500</strong><span>ج.م / سنوياً</span></div>
+        <span class="plan__save">حتى 8 مستخدمين — وفّر 2,500 ج.م سنوياً</span>
+        <ul class="plan__list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> كل مميزات النظام بلا استثناء</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> ما يعادل 542 ج.م شهرياً فقط</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> أولوية في الدعم الفني</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> تحديثات وترقيات مجانية طوال السنة</li>
+        </ul>
+        <a class="btn btn--primary" href="#contact">اشترك بسنة كاملة</a>
+      </div>
+
+      <!-- الدائمة -->
+      <div class="plan plan--best reveal">
+        <span class="plan__flag plan__flag--teal">أفضل قيمة على المدى الطويل</span>
+        <div class="plan__name">الترخيص الدائم</div>
+        <p class="plan__for">دفعة واحدة… ملكية تدوم</p>
+        <div class="plan__price"><strong>17,900</strong><span>ج.م — مرة واحدة</span></div>
+        <span class="plan__save">حتى 12 مستخدماً — دعم وتحديثات 12 شهراً</span>
+        <ul class="plan__list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> بلا اشتراكات متجددة — تدفع مرة واحدة</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> تحديثات ودعم لمدة 12 شهراً</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> تجديد التحديثات اختياري بعدها</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> نقل الترخيص لجهاز جديد مجاناً (مرتان سنوياً)</li>
+        </ul>
+        <a class="btn btn--outline" href="#contact">اطلب ترخيصك الدائم</a>
+      </div>
+    </div>
+
+    <!-- جدول مقارنة تفصيلي -->
+    <div class="compare reveal">
+      <h3 class="compare__title">مقارنة تفصيلية بين الباقات</h3>
+      <div class="compare__scroll">
+        <table class="compare__table">
+          <thead>
+            <tr>
+              <th scope="col">البند</th>
+              <th scope="col">تجريبية</th>
+              <th scope="col">شهري</th>
+              <th scope="col">سنوي</th>
+              <th scope="col">دائم</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>السعر</td><td>مجاناً</td><td>750 ج.م / شهر</td><td>6,500 ج.م / سنة</td><td>17,900 ج.م مرة واحدة</td></tr>
+            <tr><td>مدة الصلاحية</td><td>30 يوماً</td><td>30 يوماً قابلة للتجديد</td><td>365 يوماً</td><td>بلا انتهاء</td></tr>
+            <tr><td>الحد الأقصى للمستخدمين</td><td>3</td><td>5</td><td>8</td><td>12</td></tr>
+            <tr><td>عدد السيرفرات/الفروع</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+            <tr><td>فترة سماح بعد الانتهاء</td><td>—</td><td>7 أيام</td><td>7 أيام</td><td>—</td></tr>
+            <tr><td>الوحدات والشاشات</td><td>الكل</td><td>الكل</td><td>الكل</td><td>الكل</td></tr>
+            <tr><td>الربطات الحكومية (ETA/EDA)</td><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td></tr>
+            <tr><td>التحديثات</td><td>أثناء التجربة</td><td>أثناء الاشتراك</td><td>طوال السنة</td><td>12 شهراً + تجديد اختياري</td></tr>
+            <tr><td>الدعم الفني</td><td>طوال التجربة</td><td>واتساب</td><td>أولوية</td><td>أولوية + عن بُعد</td></tr>
+            <tr><td>نقل الترخيص لجهاز جديد</td><td>—</td><td>مرتان سنوياً</td><td>مرتان سنوياً</td><td>مرتان سنوياً</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare__note">
+        الأسعار لا تشمل ضريبة القيمة المضافة (14%) وتُصدر فاتورة ضريبية رسمية باسم الصيدلية.
+        لديك أكثر من فرع؟ كل فرع يحتاج ترخيصاً مستقلاً (بيانات الفروع لا تختلط) —
+        <a href="#contact"><strong>تواصل معنا</strong></a> لأسعار تفضيلية من ترخيصين فأكثر.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ دليل البدء ═══════════ -->
+<section class="section section--alt" id="guide">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">أربع خطوات فقط</span>
+      <h2 class="sec-title">من التحميل إلى أول فاتورة بيع</h2>
+      <p class="sec-sub">المثبّت يقوم بكل شيء تلقائياً — تثبيت PostgreSQL، تسجيل الخدمات، فتح منافذ جدار الحماية، وإنشاء الاختصارات.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <span class="step__num">1</span>
+        <h3>ثبّت الماستر</h3>
+        <p>شغّل مثبّت الماستر كمسؤول على الجهاز الرئيسي. سيُثبّت قاعدة بيانات PostgreSQL 17 والخدمات ويجهز كل شيء تلقائياً — بلا خبرة تقنية وبلا إنترنت.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step__num">2</span>
+        <h3>أنشئ حساب المدير</h3>
+        <p>عند أول تشغيل: أنشئ حساب مسؤول النظام وفعّل المصادقة الثنائية (TOTP). سيظهر لك مُعرّف التثبيت الخاص بجهازك — انسخه بزر واحد.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step__num">3</span>
+        <h3>ابدأ التجربة أو فعّل الترخيص</h3>
+        <p>ابدأ التجربة المجانية 30 يوماً بكل المميزات فوراً — أو أرسل مُعرّف التثبيت إلينا لصدور ملف الترخيص المناسب لباقتك، وتفعّله من صفحة الترخيص.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step__num">4</span>
+        <h3>وصّل بقية الأجهزة</h3>
+        <p>ثبّت عميل الكاشير على أجهزة ويندوز وتطبيق أندرويد على الهواتف — ستكتشف الخادم تلقائياً على شبكة الصيدلية عبر UDP خلال ثوانٍ.</p>
+      </div>
+    </div>
+
+    <div class="steps-guide reveal">
+      <a class="btn btn--primary" href="#download">التحميل من هنا</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ الأسئلة الشائعة ═══════════ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">أسئلة يسألها كل صيدلي</span>
+      <h2 class="sec-title">الأسئلة الشائعة</h2>
+    </div>
+
+    <div class="faq">
+
+      <div class="faq__item reveal">
+        <button class="faq__q" type="button" aria-expanded="false">
+          هل يعمل النظام بدون إنترنت فعلاً؟
+          <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          نعم — النظام مصمم محلياً بالكامل: قاعدة البيانات والخادم والواجهة كلها على جهازك داخل الصيدلية، وكل المكتبات (الباركود، QR، الخطوط العربية للـPDF) مضمّنة داخله.
+          الإنترنت مطلوب فقط عند اختيارك ربط الفاتورة الإلكترونية (ETA) أو منظومة تتبع الأدوية (EDA)، وحتى تلك تعمل بذاكرة مزامنة وقاطع دائرة يعيد الإرسال تلقائياً عند عودة الاتصال.
+          انقطاع النت لا يوقف بيعة واحدة ولا يوقف كاشيراً واحداً.
+        </div></div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" type="button" aria-expanded="false">
+          أين تُحفظ بيانات صيدليتي؟ ومن يراها؟
+          <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          على جهازك أنت — قاعدة بيانات PostgreSQL تعمل داخل صيدليتك، لا سحابة ولا خوادم خارجية ولا نستطيع نحن الاطلاع عليها حتى لو أردنا.
+          الربطات الحكومية (ETA/EDA) ترسل فقط ما تنص اللائحة عليه من مستندات، بالضبط كما يفعل أي نظام فواتير إلكترونية معتمد.
+          يوجد داخل النظام نسخ احتياطي مجدول واستعادة بنقرة، ونسخة قابلة للنقل لخارج الجهاز — بياناتك ملكك بالكامل.
+        </div></div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" type="button" aria-expanded="false">
+          ما المتطلبات الفنية للأجهزة؟
+          <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          <strong>جهاز الماستر:</strong> ويندوز 10 أو 11 (64-بت) وذاكرة 8 جيجابايت — أي جهاز مكتبي عادي يفي بالغرض.
+          <strong>أجهزة الكاشير:</strong> ويندوز 7 SP1 وما أحدث بذاكرة 4 جيجابايت — التطبيق يجلب متصفحه المدمج معه فلا يحتاج تثبيت أي شيء.
+          <strong>الهاتف:</strong> أندرويد 5.0 أو أحدث. <strong>الشبكة:</strong> راوتر عادي (واي فاي أو سلكي) يربط أجهزة الصيدلية ببعضها فقط.
+        </div></div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" type="button" aria-expanded="false">
+          كم مستخدماً يستطيع العمل في نفس الوقت؟
+          <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          حسب باقتك: التجريبية 3 مستخدمين، الشهرية 5، السنوية 8، والدائمة 12 — وكلهم يعملون متزامنين على شبكة الصيدلية بصلاحيات مختلفة.
+          وإذا احتجت أكثر من ذلك يمكن زيادة حد المستخدمين في ترخيصك عبر الدعم الفني. لكل فرع ترخيص مستقل لأن كل فرع يعمل بقاعدة بياناته المحلية.
+        </div></div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" type="button" aria-expanded="false">
+          ماذا يحدث لبياناتي بعد انتهاء التجربة المجانية؟
+          <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          لا تُمسح ولا تُقفل — كل ما أدخلته من أصناف ومخزون وفواتير يبقى كما هو في قاعدة بياناتك.
+          عند شراء الترخيص تستلم ملف ترخيص تفعّله على نفس الجهاز فتستكمل العمل من حيث توقفت دون أي تصدير أو استيراد.
+          إذا اخترت عدم الشراء يمكنك تصدير بياناتك بالكامل في أي وقت — بياناتك ملكك.
+        </div></div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" type="button" aria-expanded="false">
+          ماذا يحدث عند انتهاء الاشتراك؟ وهل يفقدني النظام بياناتي؟
+          <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          باقات الاشتراك لها فترة سماح 7 أيام بعمل كامل بعد الانتهاء (مع لافتة تنبيه)، وبعدها يدخل النظام وضع قراءة فقط: كل بياناتك ظاهرة ومراجعة وتصدير — والبيع فقط موقوف حتى تجدد.
+          لا حاجة لإعادة تثبيت أي شيء عند التجديد: تفعّل ملف الترخيص الجديد وتكمل فوراً. الترخيص الدائم بالطبع لا ينتهي أبداً.
+        </div></div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" type="button" aria-expanded="false">
+          كيف أنقل الترخيص إذا غيّرت جهاز الصيدلية؟
+          <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          الترخيص مرتبط ببصمة الجهاز — ومن داخل النظام تُلغي التفعيل على الجهاز القديم ثم تفعّل الترخيص على الجهاز الجديد بنفس الملف.
+          متاح نقل مجاني مرتان في السنة (يكفي لتغيير جهاز أو استبدال مذربورد)، وما زاد يتم عبر الدعم الفني خلال دقائق.
+        </div></div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" type="button" aria-expanded="false">
+          هل تدعمون الفاتورة الإلكترونية وتتبع هيئة الدواء رسمياً؟
+          <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          نعم — الفاتورة الإلكترونية ETA مدعومة بإيصالات B2C وفواتير B2B بتوقيع CAdES-BES الرسمي، مع بيئة اختبار وإنتاج وإلغاء واستعلام.
+          وتتبع الأدوية EDA مربوط بمنظومة القابلية للتتبع بمزامنة أحداث تلقائية وسجل تحقق كامل. كلتا الربطتين تعملان بذاكرة مزامنة وقاطع دائرة، وتُحدَّثان مع أي تعديلات رسمية في تحديثات النظام.
+        </div></div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" type="button" aria-expanded="false">
+          ماذا عن الطابعات والباركود؟ وما أحتاج شراءه؟
+          <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          يدعم النظام طابعات إيصالات حرارية بعرض 58 و80 مم (ESC/POS)، وطابعات الملصقات الحرارية بـ12 مقاساً جاهزاً من 30×20 حتى 60×40 مم مع مقاس مخصص — تُقص الملصق جاهزاً بلا أي ضبط يدوي (Xprinter وTSC وأمثالها).
+          للمسح: ماسح باركود USB (يعمل بلا أي إعداد)، أو كاميرا جهاز الكاشير، أو كاميرا الهاتف عبر تطبيق أندرويد. وهو يقرأ كل الصيغ الشائعة حتى GS1 DataMatrix المصري للدواء.
+        </div></div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" type="button" aria-expanded="false">
+          كيف أضمن أن ملفات التحميل أصلية وغير معدّلة؟
+          <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          كل ملف تحميل منشور مع بصمة SHA256 الخاصة به — احسب بصمة ملفك بعد التحميل (بأمر <code>certutil -hashfile "الملف.exe" SHA256</code> في ويندوز) وقارنها بالمنشورة: إن تطابقت فملفك أصلي 100%.
+          كما أن النظام مصحوب بـ444 اختباراً آلياً ناجحاً وبناء نظيف بلا تحذيرات، والتراخيص موقّعة رقمياً ومرتبطة ببصمة الجهاز.
+        </div></div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" type="button" aria-expanded="false">
+          كيف أهاجر من نظامي القديم إلى CRYSTALA؟
+          <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          أسهل نقطة بداية: استورد دليل الأدوية وأرصدة الافتتاح من ملف Excel — النظام يستوردها بدفعاتها وتواريخ صلاحيتها، وتكمل العمل من اليوم الأول.
+          فريق الدعم يساعدك في خطوات الترحيل عن بُعد، ويمكنك تشغيل النظامين بالتوازي في أسبوع تجربة قبل قطع العلاقة مع القديم نهائياً.
+        </div></div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" type="button" aria-expanded="false">
+          هل الأسعار شاملة ضريبة القيمة المضافة؟
+          <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          لا — جميع الأسعار المعلنة لا تشمل ضريبة القيمة المضافة (14%)، وتُصدر فاتورة ضريبية رسمية باسم الصيدلية عند الشراء.
+          لا رسوم خفية إطلاقاً: ما تراه في الباقة هو ما تدفعه، والتحديثات أثناء فترة الباقة مجانية بالكامل.
+        </div></div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" type="button" aria-expanded="false">
+          ماذا يدخل في «التحديثات والدعم» للترخيص الدائم؟
+          <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner">
+          لمدة 12 شهراً من الشراء تحصل على كل الإصدارات الجديدة (ميزات، إصلاحات، وتحديثات مواكبة لتعليمات ETA/EDA) مع الدعم الفني الكامل عبر واتساب وجلسات عن بُعد.
+          بعد انتهاء السنة يظل النظام يعمل لديك للأبد بكامل ميزاته، ويُتاح اشتراك تحديثات ودعم سنوي اختياري لمن يريد مواصلة استلام التحديثات.
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ التواصل ═══════════ -->
+<section class="section section--dark" id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="reveal">
+        <span class="sec-kicker">جاهز للبدء؟</span>
+        <h2 class="contact-title">ابدأ تجربتك المجانية اليوم — أو تحدث معنا أولاً</h2>
+        <p class="contact-sub">
+          فريقنا يفهم بيئة الصيدليات المصرية. اسألنا عن أي شيء: الترحيل من نظامك القديم،
+          تجهيز الأجهزة والطابعات، الربط الضريبي، أو أي سؤال قبل الشراء — الرد خلال ساعات العمل سريع.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#download">حمّل التجربة المجانية</a>
+        </div>
+      </div>
+      <div class="contact-cards" id="contact-cards">
+        <!-- تُبنى البطاقات تلقائياً من js/main.js — عدّل بيانات التواصل من هناك -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ التذييل ═══════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__about">
+        <div class="footer__brand">
+          <img src="assets/img/logo-512.png" alt="CRYSTALA PHARMACY" />
+          <span>CRYSTALA PHARMACY</span>
+        </div>
+        <p>نظام إدارة صيدليات مصري يعمل محلياً بالكامل — صُمم لبيئة الصيدلية وتشريعاتها، ويُحدَّث باستمرار لمواكبة متطلبات الفاتورة الإلكترونية وتتبع الأدوية.</p>
+        <div class="footer__badges">
+          <span>أوفلاين 100%</span>
+          <span>فاتورة إلكترونية ETA</span>
+          <span>تتبع EDA</span>
+        </div>
+      </div>
+      <div>
+        <h4>استكشف النظام</h4>
+        <ul>
+          <li><a href="#modules">الوحدات الـ14</a></li>
+          <li><a href="#features">المميزات بالتفصيل</a></li>
+          <li><a href="#architecture">بنية الشبكة</a></li>
+          <li><a href="#security">الأمان والخصوصية</a></li>
+          <li><a href="#tech">التقنيات</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#download">تحميل النظام</a></li>
+          <li><a href="#pricing">الأسعار والباقات</a></li>
+          <li><a href="#guide">دليل البدء</a></li>
+          <li><a href="#faq">الأسئلة الشائعة</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>قانوني</h4>
+        <ul>
+          <li><a href="eula.html">اتفاقية الترخيص (EULA)</a></li>
+          <li><a href="privacy.html">بيان حماية البيانات</a></li>
+          <li><a href="#contact">سياسة الدعم الفني</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> CRYSTALA — جميع الحقوق محفوظة</span>
+      <span>صُنع في مصر 🇪🇬 لصيدليات مصر</span>
+    </div>
+  </div>
+</footer>
+
+<!-- زر العودة للأعلى -->
+<button class="to-top" id="to-top" type="button" aria-label="العودة للأعلى">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
