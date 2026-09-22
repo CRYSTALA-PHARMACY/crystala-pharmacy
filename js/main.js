@@ -19,7 +19,7 @@ const CONFIG = {
       os: 'ويندوز 10/11 — 64-بت',
       filename: 'CRYSTALA-PHARMACY-Setup-1.6.4-Clean.exe',
       sha256: 'e5c0c3052071f05c73bd0223be5bd083f056fb40a440b1ccde6cd38061496d25',
-      url: 'https://github.com/tamertamer1212/crystala-pharmacy/releases/download/v1.6.4/CRYSTALA-PHARMACY-Setup-1.6.4-Clean.exe',
+      url: 'https://github.com/CRYSTALA-PHARMACY/crystala-pharmacy/releases/download/v1.6.4/CRYSTALA-PHARMACY-Setup-1.6.4-Clean.exe',
       primary: true
     },
     {
@@ -31,7 +31,7 @@ const CONFIG = {
       os: 'ويندوز 7 SP1 وما أحدث',
       filename: 'CRYSTALA-PHARMACY-Client-Setup-1.6.4.exe',
       sha256: '1feff00bf1f0a8d77a36099f9fa2c7d318dd3ec0a027b7e62d5b5e5c4b59547e',
-      url: 'https://github.com/tamertamer1212/crystala-pharmacy/releases/download/v1.6.4/CRYSTALA-PHARMACY-Client-Setup-1.6.4.exe',
+      url: 'https://github.com/CRYSTALA-PHARMACY/crystala-pharmacy/releases/download/v1.6.4/CRYSTALA-PHARMACY-Client-Setup-1.6.4.exe',
       primary: false
     },
     {
@@ -43,7 +43,7 @@ const CONFIG = {
       os: 'أندرويد 5.0 وما أحدث',
       filename: 'CRYSTALA-PHARMACY-1.6.4-aligned-signed.apk',
       sha256: 'd90ddd962287e8868edd75736238fa5ab053a0425f20cf8e4e352999422d43f4',
-      url: 'https://github.com/tamertamer1212/crystala-pharmacy/releases/download/v1.6.4/CRYSTALA-PHARMACY-1.6.4-aligned-signed.apk',
+      url: 'https://github.com/CRYSTALA-PHARMACY/crystala-pharmacy/releases/download/v1.6.4/CRYSTALA-PHARMACY-1.6.4-aligned-signed.apk',
       primary: false
     },
   ],
