@@ -91,7 +91,7 @@ function buildDownloads() {
         <button class="copy" data-hash="${d.sha256}" type="button">نسخ</button>
       </div>
       <div class="dl-card__actions">
-        <a class="btn ${d.primary ? 'btn--primary' : 'btn--ghost'}" href="${d.url}" target="_blank" rel="noopener">
+        <a class="btn ${d.primary ? 'btn--primary' : 'btn--outline'}" href="${d.url}" target="_blank" rel="noopener">
           ${ICONS.download} تحميل ${d.filename}
         </a>
       </div>
