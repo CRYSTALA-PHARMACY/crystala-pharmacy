@@ -1038,5 +1038,31 @@
 </button>
 
 <script src="js/main.js?v=1.6.4.4"></script>
+
+<!-- ═══ عداد الزيارات — CRYSTALA PHARMACY ═══ -->
+<div id="cp-visitor-badge" style="position:fixed;bottom:14px;left:14px;z-index:9999;direction:rtl;background:rgba(14,42,67,.94);color:#fff;font-family:'Cairo',Tahoma,sans-serif;font-size:12.5px;font-weight:600;padding:8px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.3);display:flex;align-items:center;gap:7px;" aria-label="عدد الزيارات">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4fd1c5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+  <span>عدد الزيارات: <b id="cp-visitor-count" style="color:#4fd1c5;">...</b></span>
+</div>
+<script>
+(function(){
+  try{
+    var NS='crystala-site', KEY='visits', API='https://abacus.jasoncameron.dev/';
+    var today=new Date().toISOString().slice(0,10);
+    var counted=localStorage.getItem('cp_counted');
+    var url=(counted===today)?API+'get/'+NS+'/'+KEY:API+'hit/'+NS+'/'+KEY;
+    localStorage.setItem('cp_counted',today);
+    fetch(url).then(function(r){return r.json();}).then(function(d){
+      var el=document.getElementById('cp-visitor-count');
+      if(el&&d&&typeof d.value==='number') el.textContent=d.value;
+    }).catch(function(){var b=document.getElementById('cp-visitor-badge'); if(b) b.style.display='none';});
+    setTimeout(function(){var el=document.getElementById('cp-visitor-count');
+      if(el&&el.textContent==='...'){var b=document.getElementById('cp-visitor-badge'); if(b) b.style.display='none';}},7000);
+  }catch(e){
+    var b=document.getElementById('cp-visitor-badge'); if(b) b.style.display='none';
+  }
+})();
+</script>
+<!-- ═══ نهاية عداد الزيارات ═══ -->
 </body>
 </html>
