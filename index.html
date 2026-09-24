@@ -1047,7 +1047,7 @@
 <script>
 (function(){
   try{
-    var NS='crystala-site', KEY='visits', API='https://abacus.jasoncameron.dev/';
+    var NS='crystala-v2', KEY='visits', API='https://abacus.jasoncameron.dev/';
     var today=new Date().toISOString().slice(0,10);
     var counted=localStorage.getItem('cp_counted');
     var url=(counted===today)?API+'get/'+NS+'/'+KEY:API+'hit/'+NS+'/'+KEY;
