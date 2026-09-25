@@ -8,42 +8,58 @@ const CONFIG = {
   version: '1.6.4',
   releaseDate: '22 سبتمبر 2026',
 
-  // روابط التحميل — استبدلها بروابط GitHub Releases عند نشر مستودعك
+  // روابط التحميل من GitHub Releases
   downloads: [
     {
       id: 'master',
       icon: 'server',
-      title: 'مثبّت الماستر — الخادم الرئيسي',
+      title: 'مثبّت الماستر — الخادم الرئيسي (مطلوب)',
       desc: 'النظام الكامل على جهاز واحد: الخادم + قاعدة بيانات PostgreSQL 17 + الواجهة + كل المتطلبات مضمّنة. يُثبَّت على جهاز الصيدلية الرئيسي ويخدم بقية الأجهزة — لا يحتاج إنترنت إطلاقاً.',
+      badge: 'مطلوب أولاً',
       size: '275 MB',
       os: 'ويندوز 10/11 — 64-بت',
-      filename: 'CRYSTALA-PHARMACY-Setup-1.6.4-Clean.exe',
+      filename: 'CRYSTALA-PHARMACY-MASTER-Server-1.6.4.exe',
       sha256: 'e5c0c3052071f05c73bd0223be5bd083f056fb40a440b1ccde6cd38061496d25',
-      url: 'https://github.com/CRYSTALA-PHARMACY/crystala-pharmacy/releases/download/v1.6.4/CRYSTALA-PHARMACY-Setup-1.6.4-Clean.exe',
+      url: 'https://github.com/CRYSTALA-PHARMACY/crystala-pharmacy/releases/download/v1.6.4/CRYSTALA-PHARMACY-MASTER-Server-1.6.4.exe',
       primary: true
     },
     {
       id: 'client',
       icon: 'desktop',
-      title: 'مثبّت عميل الشبكة — أجهزة الكاشير',
+      title: 'مثبّت عميل الشبكة — أجهزة الكاشير (يتطلب الماستر)',
       desc: 'تطبيق ويندوز لأجهزة الكاشير والاستقبال يفتح النظام مباشرة من الماستر (كروميوم مضمّن — يعمل بدون متصفح وبدون تثبيت أي متطلبات، وكاميرته تقرأ الباركود وQR).',
+      badge: 'يتطلب الماستر',
       size: '179 MB',
       os: 'ويندوز 7 SP1 وما أحدث',
-      filename: 'CRYSTALA-PHARMACY-Client-Setup-1.6.4.exe',
+      filename: 'CRYSTALA-PHARMACY-CLIENT-Windows-1.6.4.exe',
       sha256: '1feff00bf1f0a8d77a36099f9fa2c7d318dd3ec0a027b7e62d5b5e5c4b59547e',
-      url: 'https://github.com/CRYSTALA-PHARMACY/crystala-pharmacy/releases/download/v1.6.4/CRYSTALA-PHARMACY-Client-Setup-1.6.4.exe',
+      url: 'https://github.com/CRYSTALA-PHARMACY/crystala-pharmacy/releases/download/v1.6.4/CRYSTALA-PHARMACY-CLIENT-Windows-1.6.4.exe',
       primary: false
     },
     {
       id: 'android',
       icon: 'phone',
-      title: 'تطبيق أندرويد',
+      title: 'تطبيق أندرويد (يتطلب الماستر)',
       desc: 'عميل مصغّر للهاتف: يكتشف الماستر تلقائياً على شبكة الواي فاي، بماسح ZXing أصلي يقرأ 12 صيغة باركود وQR وGS1 DataMatrix — لبحث الأصناف وتأكيد الروشتات.',
+      badge: 'يتطلب الماستر',
       size: '1 MB',
       os: 'أندرويد 5.0 وما أحدث',
-      filename: 'CRYSTALA-PHARMACY-1.6.4-aligned-signed.apk',
+      filename: 'CRYSTALA-PHARMACY-CLIENT-Android-1.6.4.apk',
       sha256: 'd90ddd962287e8868edd75736238fa5ab053a0425f20cf8e4e352999422d43f4',
-      url: 'https://github.com/CRYSTALA-PHARMACY/crystala-pharmacy/releases/download/v1.6.4/CRYSTALA-PHARMACY-1.6.4-aligned-signed.apk',
+      url: 'https://github.com/CRYSTALA-PHARMACY/crystala-pharmacy/releases/download/v1.6.4/CRYSTALA-PHARMACY-CLIENT-Android-1.6.4.apk',
+      primary: false
+    },
+    {
+      id: 'bundle',
+      icon: 'code',
+      title: 'الحزمة الكاملة — ماستر + عملاء + دليل (موصى به للمبتدئين)',
+      desc: 'أرشيف ZIP يحتوي على الماستر وعميل ويندوز وعميل أندرويد معاً + دليل تثبيت مدمج. الخيار الأسهل للصيدليات الجديدة — حمّل ملفاً واحداً واحصل على كل شيء.',
+      badge: 'موصى به',
+      size: '455 MB',
+      os: 'ZIP — يحتاج فكاً قبل التثبيت',
+      filename: 'CRYSTALA-PHARMACY-Full-Package-1.6.4.zip',
+      sha256: 'eb5b1ab5411f5a1dac8cd4b8e0a62c186ded4e089f909bc223a64769dc346b5f',
+      url: 'https://github.com/CRYSTALA-PHARMACY/crystala-pharmacy/releases/download/v1.6.4/CRYSTALA-PHARMACY-Full-Package-1.6.4.zip',
       primary: false
     },
   ],
@@ -61,7 +77,7 @@ const ICONS = {
   server: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 6.5h.01M6 17.5h.01"/></svg>',
   desktop: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="13" rx="2"/><path d="M8 21h8M12 16v5"/></svg>',
   phone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>',
-  code: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6M16 6l6 6-6 6M13 4l-2 16"/></svg>',
+  code: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6M13 4l-2 16"/></svg>',
   download: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>',
   whatsapp: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15L2 22l5.15-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.06.9.9-2.98-.2-.31a8.1 8.1 0 1 1 6.79 3.7Zm4.47-6.07c-.24-.12-1.44-.71-1.66-.8-.22-.08-.38-.12-.54.13-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.1 3.64.57.25 1.02.4 1.37.5.58.19 1.1.16 1.51.1.46-.07 1.44-.59 1.64-1.16.2-.57.2-1.05.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>',
   mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg>',
@@ -73,7 +89,7 @@ function buildDownloads() {
   const grid = document.getElementById('dl-grid');
   if (!grid) return;
   grid.innerHTML = CONFIG.downloads.map(d => `
-    <article class="dl-card reveal">
+    <article class="dl-card reveal${d.id === 'master' ? ' dl-card--required' : ''}${d.id === 'bundle' ? ' dl-card--recommended' : ''}">
       <div class="dl-card__head">
         <div class="dl-card__icon">${ICONS[d.icon] || ICONS.server}</div>
         <div>
@@ -81,6 +97,7 @@ function buildDownloads() {
           <p class="dl-card__desc">${d.desc}</p>
         </div>
       </div>
+      ${d.badge ? `<div class="dl-card__badge">${d.badge}</div>` : ''}
       <div class="dl-card__meta">
         <span class="chip">${d.size}</span>
         <span class="chip">${d.os}</span>
