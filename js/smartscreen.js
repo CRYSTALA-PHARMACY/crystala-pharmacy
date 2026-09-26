@@ -10,6 +10,10 @@
    • عدّادات قياس (shown / passed) تُرسل لنفس خدمة عداد الزيارات
    لتعرف المالك نسبة من وصل للتحميل فعلاً.
    • كل النصوص هنا — لا شيء في index.html.
+
+   v1.1: بنية نافذة flex — الأزرار مثبتة أسفل النافذة دائماً (لا تختفي
+   تحت خط الرؤية على الشاشات القصيرة) + التحميل عبر location.href
+   (مضمون ضد حاجب النوافذ) + رابط تحميل مباشر احتياطي.
    ═══════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -165,17 +169,20 @@
       '<div class="ss-modal__bd" data-ss-close></div>' +
       '<div class="ss-modal__box" role="dialog" aria-modal="true" aria-label="إرشادات تجاوز شاشة Windows الزرقاء">' +
       '<button class="ss-modal__x" type="button" data-ss-close aria-label="إغلاق">' + SVG.x + '</button>' +
+      '<div class="ss-modal__scroll">' +
       '<div class="ss-modal__hd">' +
       '<h3>خطوة أخيرة قبل التحميل — مهمة جداً</h3>' +
       '<p>عند تشغيل المثبّت ستظهر شاشة زرقاء <b>SmartScreen</b>. هذه <b>ليست مشكلة في الملف</b> — إنها رسالة قياسية يعرضها ويندوز على كل برنامج جديد يعمل أوفلاين 100% مثل نظامنا، لأنه لا يجد سجلاً جاهزاً له. شاهد الخطوات (17 ثانية) وستثبّت بثقة:</p>' +
       '</div>' +
       '<div class="ss-modal__demo"></div>' +
       '<div class="ss-chips"><span>1. More info</span><span>2. Run anyway</span><span>3. يبدأ التثبيت عادي</span></div>' +
+      '<p class="ss-modal__note">بعد الضغط على «فهمت» لن تظهر هذه النافذة على هذا المتصفح مرة أخرى.</p>' +
+      '</div>' +
       '<div class="ss-modal__acts">' +
       '<button class="ss-go" type="button">فهمت — حمّل الآن</button>' +
       '<a class="ss-wa" data-ss-wa="modal" target="_blank" rel="noopener">ظهرت لي الشاشة وأحتاج مساعدة</a>' +
+      '<a class="ss-direct" data-ss-direct hidden>لم يبدأ التحميل؟ اضغط هنا للتحميل المباشر</a>' +
       '</div>' +
-      '<p class="ss-modal__note">بعد الضغط على «فهمت» لن تظهر هذه النافذة على هذا المتصفح مرة أخرى.</p>' +
       '</div>';
     document.body.appendChild(modalEl);
 
@@ -187,8 +194,9 @@
     modalEl.querySelector('.ss-go').addEventListener('click', function () {
       markSeen();
       beacon('ss_passed');
-      if (pendingUrl) { window.open(pendingUrl, '_blank', 'noopener'); }
+      var url = pendingUrl;
       closeModal();
+      if (url) { try { window.location.href = url; } catch (e) {} }
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && !modalEl.hidden) closeModal();
@@ -199,6 +207,8 @@
     ensureModal();
     pendingUrl = url || null;
     modalEl.querySelector('.ss-go').textContent = url ? 'فهمت — حمّل الآن' : 'تم — فهمت الخطوات';
+    var dir = modalEl.querySelector('[data-ss-direct]');
+    if (dir) { if (url) { dir.href = url; dir.hidden = false; } else { dir.hidden = true; } }
     modalEl.hidden = false;
     document.body.style.overflow = 'hidden';
     modalDemo.play();
