@@ -14,6 +14,12 @@
    v1.1: بنية نافذة flex — الأزرار مثبتة أسفل النافذة دائماً (لا تختفي
    تحت خط الرؤية على الشاشات القصيرة) + التحميل عبر location.href
    (مضمون ضد حاجب النوافذ) + رابط تحميل مباشر احتياطي.
+
+   v1.2: إصلاحان — (أ) رابط واتساب داخل المودال كان بلا href لأن wire()
+   يعمل عند DOMContentLoaded قبل إنشاء المودال مؤجلاً؛ أصبح مضمّناً في
+   القالب نفسه. (ب) المعترض العام يستثني الآن الروابط داخل .ss-modal
+   حتى يعمل رابط «لم يبدأ التحميل؟ التحميل المباشر» فعلاً بدل إعادة
+   فتح المودال.
    ═══════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -180,7 +186,7 @@
       '</div>' +
       '<div class="ss-modal__acts">' +
       '<button class="ss-go" type="button">فهمت — حمّل الآن</button>' +
-      '<a class="ss-wa" data-ss-wa="modal" target="_blank" rel="noopener">ظهرت لي الشاشة وأحتاج مساعدة</a>' +
+      '<a class="ss-wa" data-ss-wa="modal" target="_blank" rel="noopener" href="https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(WA_MSG_HELP) + '">ظهرت لي الشاشة وأحتاج مساعدة</a>' +
       '<a class="ss-direct" data-ss-direct hidden>لم يبدأ التحميل؟ اضغط هنا للتحميل المباشر</a>' +
       '</div>' +
       '</div>';
@@ -236,6 +242,8 @@
       if (!t || !t.closest) return;
       var a = t.closest('a[href*="releases/download"]');
       if (!a) return;
+      /* الروابط داخل المودال نفسه (رابط التحميل المباشر) لا تُعترَض — وإلا أعاد فتح المودال بدل التحميل */
+      if (a.closest('.ss-modal')) return;
       var href = a.getAttribute('href') || '';
       if (/\.apk(?:\?|#|$)/i.test(href)) return;
       if (seen()) return;
