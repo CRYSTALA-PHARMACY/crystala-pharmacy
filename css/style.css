@@ -829,15 +829,15 @@ code {
   display: inline-block; margin-top: 7px; padding: 1px 5px;
   font-size: 10.5px; color: #e8f1fa; direction: ltr;
   background: rgba(46, 134, 196, .22); border-radius: 4px;
-  animation: ss-select 3.4s ease forwards;
+  animation: ss-select 3.2s ease forwards;
 }
 @keyframes ss-select {
   0%, 55% { background: rgba(46, 134, 196, .22); color: #e8f1fa; }
   62%, 100% { background: #2e86c4; color: #fff; }
 }
 
-/* مؤشر الفأرة + نبضة الدبل-كليك */
-.ss-cur { position: absolute; left: 21%; top: 47%; width: 24px; height: 24px; z-index: 2; filter: drop-shadow(0 3px 6px rgba(0,0,0,.5)); animation: ss-curmove 3.4s cubic-bezier(.45, 0, .2, 1) both; }
+/* مؤشر الفأرة + نبضة الكليك + قائمة السياق (كليك يمين) */
+.ss-cur { position: absolute; left: 21%; top: 47%; width: 24px; height: 24px; z-index: 2; filter: drop-shadow(0 3px 6px rgba(0,0,0,.5)); animation: ss-curmove 3.2s cubic-bezier(.45, 0, .2, 1) both; }
 .ss-cur svg { width: 100%; height: 100%; display: block; }
 .ss-cur__ping { position: absolute; inset: -8px; border: 3px solid #ffd66b; border-radius: 50%; opacity: 0; animation: ss-ping .8s ease-out 2; animation-delay: 2s; }
 @keyframes ss-curmove {
@@ -849,6 +849,39 @@ code {
 @keyframes ss-ping {
   0% { opacity: .95; transform: scale(.4); }
   100% { opacity: 0; transform: scale(1.5); }
+}
+
+/* قائمة سياق ويندوز (كليك يمين) — مع تمييز «Run as administrator» */
+.ss-menu {
+  position: absolute; left: 120px; top: 42%; z-index: 2;
+  width: 218px; padding: 5px 0;
+  background: #f2f2f2; border: 1px solid #c7c7c7; border-radius: 7px;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, .5);
+  direction: ltr; text-align: left;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 11.5px; color: #1b1b1b;
+}
+.ss-menu--enter { animation: ss-menu-pop .3s ease-out 1.9s both; }
+@keyframes ss-menu-pop {
+  0% { opacity: 0; transform: scale(.86); transform-origin: top left; }
+  100% { opacity: 1; transform: scale(1); }
+}
+.ss-menu__item { display: flex; align-items: center; gap: 8px; margin: 0 4px; padding: 6px 10px; border-radius: 4px; white-space: nowrap; }
+.ss-menu__item svg { width: 13px; height: 13px; flex: 0 0 auto; color: #ffd66b; }
+.ss-menu__sep { display: block; height: 1px; margin: 4px 10px; background: #d9d9d9; }
+.ss-menu__item--admin { background: #0078d7; color: #fff; font-weight: 700; animation: ss-glow 1.15s ease-in-out infinite; }
+/* المشهد الأول: القائمة ظهرت للتو — العنصر محايد بلا تمييز */
+.ss-menu--idle .ss-menu__item--admin { background: transparent; color: #1b1b1b; font-weight: 400; animation: none; }
+.ss-menu--idle .ss-menu__item--admin svg { color: #555; }
+
+/* مؤشر المشهد الثاني — ينتقل من الملف إلى «Run as administrator» */
+.ss-cur--admin { left: 168px; top: calc(42% + 44px); animation: ss-curmove-adm 4.2s cubic-bezier(.45, 0, .2, 1) both; }
+.ss-cur--admin .ss-cur__ping { animation-delay: 2.3s; }
+@keyframes ss-curmove-adm {
+  0% { transform: translate(-85px, -72px); opacity: 0; }
+  14% { opacity: 1; }
+  52% { transform: translate(0, 0); }
+  100% { transform: translate(0, 0); }
 }
 
 /* نافذة SmartScreen الوهمية (إنجليزية كما في ويندوز تماماً) */

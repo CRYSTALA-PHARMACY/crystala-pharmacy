@@ -20,6 +20,12 @@
    القالب نفسه. (ب) المعترض العام يستثني الآن الروابط داخل .ss-modal
    حتى يعمل رابط «لم يبدأ التحميل؟ التحميل المباشر» فعلاً بدل إعادة
    فتح المودال.
+
+   v1.3: إصلاح جوهري في مسار التثبيت — المشهد الأول كان يعلّم العميل
+   «دبل-كليك» على المثبّت، والصحيح أن التثبيت يتم بالزر الأيمن ثم
+   «Run as administrator» (تشغيل كمسؤول) لأن تثبيت قاعدة البيانات
+   PostgreSQL يتطلب صلاحيات مسؤول. أُضيف مشهد قائمة السياق (كليك يمين)
+   وأصبح الدليل 6 مشاهد ≈ 22 ثانية مع مطابقة كل تعليق لمشهده.
    ═══════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -30,13 +36,14 @@
   var WA_NUMBER = '201211629768';
   var WA_MSG_HELP = 'أهلاً، أنا أثبّت نظام CRYSTALA PHARMACY وظهرت لي شاشة SmartScreen الزرقاء عند تشغيل المثبّت — أحتاج مساعدة في خطوة More info / Run anyway';
 
-  /* ترتيب المشاهد: [المدة بالمللي ثانية، التعليق أسفل المسرح] — المجموع ≈ 17 ثانية */
+  /* ترتيب المشاهد: [المدة بالمللي ثانية، التعليق أسفل المسرح] — المجموع ≈ 22 ثانية */
   var SCENES = [
-    { dur: 3400, caption: 'التحميل اكتمل — اضغط دبل-كليك على ملف التثبيت' },
-    { dur: 4000, caption: 'تظهر الشاشة الزرقاء «Windows protected your PC» — تحذير قياسي لكل برنامج جديد يعمل أوفلاين… لا تمسح الملف!' },
-    { dur: 4000, caption: 'اضغط «More info» (مزيد من المعلومات) — الرابط الصغير في أسفل النافذة' },
-    { dur: 4000, caption: 'ثم اضغط «Run anyway» (التشغيل على أي حال) — يبدأ التثبيت الطبيعي فوراً' },
-    { dur: 3400, caption: 'اكتمل التثبيت — بيانات صيدليتك على جهازك أنت، آمنة 100%' }
+    { dur: 3200, caption: 'التحميل اكتمل — انقر بالزر الأيمن على ملف التثبيت' },
+    { dur: 4200, caption: 'اختر «Run as administrator» — التشغيل كمسؤول ضروري لتثبيت قاعدة البيانات PostgreSQL' },
+    { dur: 4000, caption: 'تظهر الشاشة الزرقاء «Windows protected your PC» — تحذير قياسي لكل برنامج جديد يعمل أوفلاين… اضغط «More info» أسفل النافذة' },
+    { dur: 3800, caption: 'ثم اضغط «Run anyway» (التشغيل على أي حال) — يبدأ التثبيت الطبيعي فوراً' },
+    { dur: 3800, caption: 'جاري التثبيت — PostgreSQL 17 والخدمات والاختصارات تُجهَّز تلقائياً' },
+    { dur: 3200, caption: 'اكتمل التثبيت — بيانات صيدليتك على جهازك أنت، آمنة 100%' }
   ];
 
   /* ── أيقونات SVG صغيرة ─────────────────────────────────────────── */
@@ -55,12 +62,28 @@
     '<span class="ss-file__name">CRYSTALA-MASTER.exe</span></div>' +
     '</div>';
 
+  /* قائمة سياق ويندوز (كليك يمين) — «Run as administrator» مع تمييزها في المشهد الثاني */
+  var MENU_ITEMS =
+    '<span class="ss-menu__item">Open</span>' +
+    '<span class="ss-menu__item ss-menu__item--admin">' + SVG.shield + 'Run as administrator</span>' +
+    '<span class="ss-menu__item">Troubleshoot compatibility</span>' +
+    '<span class="ss-menu__sep"></span>' +
+    '<span class="ss-menu__item">Properties</span>';
+
   var TPL = [
-    /* 1 — سطح المكتب + دبل كليك */
+    /* 1 — سطح المكتب + كليك يمين: قائمة السياق تظهر */
     function () {
-      return DESK + '<div class="ss-cur">' + SVG.cursor + '<i class="ss-cur__ping"></i></div>';
+      return DESK +
+        '<div class="ss-menu ss-menu--idle ss-menu--enter" dir="ltr">' + MENU_ITEMS + '</div>' +
+        '<div class="ss-cur">' + SVG.cursor + '<i class="ss-cur__ping"></i></div>';
     },
-    /* 2 — ظهور SmartScreen */
+    /* 2 — اختيار «Run as administrator» (تشغيل كمسؤول) */
+    function () {
+      return DESK +
+        '<div class="ss-menu" dir="ltr">' + MENU_ITEMS + '</div>' +
+        '<div class="ss-cur ss-cur--admin">' + SVG.cursor + '<i class="ss-cur__ping"></i></div>';
+    },
+    /* 3 — ظهور SmartScreen */
     function () {
       return '<div class="ss-desk ss-desk--dim"><div class="ss-file"><span class="ss-file__ico">' + SVG.file + '<em>SETUP</em></span>' +
         '<span class="ss-file__name">CRYSTALA-MASTER.exe</span></div></div>' +
@@ -71,7 +94,7 @@
         '<div class="ss-point ss-point--more" dir="rtl">' + SVG.point + '<span>اضغط هنا</span></div>' +
         '</div>';
     },
-    /* 3 — More info ← ظهور Run anyway */
+    /* 4 — More info ← ظهور Run anyway */
     function () {
       return '<div class="ss-desk ss-desk--dim"><div class="ss-file"><span class="ss-file__ico">' + SVG.file + '<em>SETUP</em></span>' +
         '<span class="ss-file__name">CRYSTALA-MASTER.exe</span></div></div>' +
@@ -83,7 +106,7 @@
         '<div class="ss-point ss-point--run" dir="rtl">' + SVG.point + '<span>اضغط هنا</span></div>' +
         '</div>';
     },
-    /* 4 — التثبيت يبدأ */
+    /* 5 — التثبيت يبدأ */
     function () {
       return '<div class="ss-setup">' +
         '<div class="ss-setup__bar"><i></i><i></i><i></i><em>CRYSTALA PHARMACY — Setup</em></div>' +
@@ -96,7 +119,7 @@
         '<li style="--d:2.3s">اختصارات سطح المكتب</li>' +
         '</ul></div></div>';
     },
-    /* 5 — النهاية */
+    /* 6 — النهاية */
     function () {
       return '<div class="ss-done">' +
         '<img src="assets/img/logo-512.png" alt="CRYSTALA PHARMACY" />' +
@@ -121,7 +144,7 @@
     root.innerHTML =
       '<div class="ss-demo">' +
       '<div class="ss-stage"><div class="ss-stage__inner"></div>' +
-      '<span class="ss-live">دليل متحرك · 17 ثانية</span></div>' +
+      '<span class="ss-live">دليل متحرك · 22 ثانية</span></div>' +
       '<div class="ss-cap"></div>' +
       '<div class="ss-ctrl">' +
       '<div class="ss-dots">' + SCENES.map(function () { return '<i></i>'; }).join('') + '</div>' +
@@ -178,10 +201,10 @@
       '<div class="ss-modal__scroll">' +
       '<div class="ss-modal__hd">' +
       '<h3>خطوة أخيرة قبل التحميل — مهمة جداً</h3>' +
-      '<p>عند تشغيل المثبّت ستظهر شاشة زرقاء <b>SmartScreen</b>. هذه <b>ليست مشكلة في الملف</b> — إنها رسالة قياسية يعرضها ويندوز على كل برنامج جديد يعمل أوفلاين 100% مثل نظامنا، لأنه لا يجد سجلاً جاهزاً له. شاهد الخطوات (17 ثانية) وستثبّت بثقة:</p>' +
+      '<p>انقر بالزر الأيمن على المثبّت واختر <b>Run as administrator</b> — التشغيل كمسؤول ضروري لأن المثبّت يُنصّب قاعدة البيانات PostgreSQL. قد تظهر بعدها شاشة زرقاء <b>SmartScreen</b> وهذه <b>ليست مشكلة في الملف</b> — رسالة قياسية يعرضها ويندوز على كل برنامج جديد يعمل أوفلاين 100% مثل نظامنا. شاهد الخطوات (22 ثانية) وستثبّت بثقة:</p>' +
       '</div>' +
       '<div class="ss-modal__demo"></div>' +
-      '<div class="ss-chips"><span>1. More info</span><span>2. Run anyway</span><span>3. يبدأ التثبيت عادي</span></div>' +
+      '<div class="ss-chips"><span>1. Run as administrator</span><span>2. More info</span><span>3. Run anyway</span><span>4. يبدأ التثبيت عادي</span></div>' +
       '<p class="ss-modal__note">بعد الضغط على «فهمت» لن تظهر هذه النافذة على هذا المتصفح مرة أخرى.</p>' +
       '</div>' +
       '<div class="ss-modal__acts">' +

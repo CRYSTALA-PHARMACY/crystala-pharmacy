@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=1.6.4.6" />
+  <link rel="stylesheet" href="css/style.css?v=1.6.4.7" />
 
   <!-- بيانات منظمة لمحركات البحث -->
   <script type="application/ld+json">
@@ -650,7 +650,7 @@
     <!-- ═══ دليل تجاوز شاشة SmartScreen — يظهر تلقائياً عند أول تحميل، والمحاكاة مدمجة هنا دائماً ═══ -->
     <div class="ss-guide reveal" id="smartscreen">
       <div class="ss-guide__copy">
-        <span class="ss-guide__kicker">دليل الثقة — أقل من 20 ثانية</span>
+        <span class="ss-guide__kicker">دليل الثقة — 22 ثانية فقط</span>
         <h3>ستظهر لك شاشة زرقاء عند تشغيل المثبّت؟ هذا طبيعي 100% — وهكذا تتجاوزها</h3>
         <p>
           نظام CRYSTALA يعمل أوفلاين بالكامل ولا يتصل بأي سيرفر خارجي، لذلك لا يملك «سمعة» جاهزة لدى ويندوز كبرامج الإنترنت الشهيرة —
@@ -658,12 +658,13 @@
           نفس الشاشة تظهر لكل البرامج المحلية الجديدة، وخطوات التجاوز واضحة وموثقة هنا.
         </p>
         <ol class="ss-guide__steps">
-          <li>اضغط <b>More info</b> — «مزيد من المعلومات» أسفل النافذة الزرقاء.</li>
+          <li>انقر بالزر الأيمن على ملف التثبيت واختر <b>Run as administrator</b> — «التشغيل كمسؤول» (ضروري لأن المثبّت يُنصّب قاعدة البيانات PostgreSQL).</li>
+          <li>لو ظهرت الشاشة الزرقاء: اضغط <b>More info</b> — «مزيد من المعلومات» أسفل النافذة.</li>
           <li>اضغط <b>Run anyway</b> — «التشغيل على أي حال» وسيبدأ التثبيت الطبيعي فوراً.</li>
           <li>اكتمل — افتح النظام من أيقونة سطح المكتب وابدأ التجربة المجانية 30 يوماً.</li>
         </ol>
         <div class="ss-guide__alt">
-          <b>طريقة بديلة (لو أغلقت النافذة بالخطأ):</b> كليك يمين على الملف المحمَّل ← <b>Properties</b> ← فعّل خانة <b>Unblock</b> ← OK ← شغّل الملف عادي. الملف نفسه لم يُمس ولا يتأثر بشيء.
+          <b>طريقة بديلة (لو أغلقت النافذة بالخطأ):</b> كليك يمين على الملف المحمَّل ← <b>Properties</b> ← فعّل خانة <b>Unblock</b> ← OK ← ثم شغّل الملف كمسؤول (Run as administrator). الملف نفسه لم يُمس ولا يتأثر بشيء.
         </div>
         <div class="ss-guide__actions">
           <button class="btn btn--outline" type="button" data-ss-preview="1">شاهد النافذة التي ستظهر أمامك</button>
@@ -1089,7 +1090,7 @@
 </button>
 
 <script src="js/main.js?v=1.6.4.4"></script>
-<script src="js/smartscreen.js?v=1.6.4.7"></script>
+<script src="js/smartscreen.js?v=1.6.4.8"></script>
 
 <!-- ═══ عداد الزيارات — CRYSTALA PHARMACY ═══ -->
 <div id="cp-visitor-badge" style="position:fixed;bottom:14px;left:14px;z-index:9999;direction:rtl;background:rgba(14,42,67,.94);color:#fff;font-family:'Cairo',Tahoma,sans-serif;font-size:12.5px;font-weight:600;padding:8px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.3);display:flex;align-items:center;gap:7px;" aria-label="عدد الزيارات">
